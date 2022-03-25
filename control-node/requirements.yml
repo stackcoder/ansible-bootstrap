@@ -1,0 +1,3 @@
+- name: willshersystems.sshd
+  src: https://github.com/willshersystems/ansible-sshd.git
+  version: 57c54e5268d9c09ab31b1357558cdcaa68116015 #v0.14.1

@@ -1,0 +1,6 @@
+- name: Basic Configuration
+  become: yes
+  hosts: all
+  roles:
+    - role: common
+  tags: [ system ]

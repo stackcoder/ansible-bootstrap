@@ -1,0 +1,14 @@
+- name: Configure SSH daemon
+  include_role:
+    name: willshersystems.sshd
+  vars:
+    sshd:
+      UseDNS: no
+      AcceptEnv: []
+      sftp_server: internal-sftp
+      Port: "{{ ansible_port | default('22') }}"
+      PermitRootLogin: no
+      AuthenticationMethods: publickey,password
+      Match:
+        - Condition: "User {{ ansible_user | default('ansible') }}"
+          AuthenticationMethods: publickey
