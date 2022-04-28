@@ -4,7 +4,9 @@ RUN apk --update add \
   ansible \
   bash \
   git \
+  openssh-client \
   py3-pip \
+  sshpass \
   util-linux
 
 RUN pip3 install \

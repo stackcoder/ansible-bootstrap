@@ -11,6 +11,7 @@ docker build \
 docker run -it --rm \
   --security-opt=no-new-privileges \
   --cap-drop=ALL \
+  --add-host=host.docker.internal:host-gateway \
   -e "SSH_AUTH_SOCK=/ssh.socket" \
   -v "${SSH_AUTH_SOCK}:/ssh.socket" \
   -v "${SCRIPT_DIR}/ansible:/ansible:ro" \

@@ -1,6 +1,6 @@
 - name: Basic Configuration
   become: yes
-  hosts: all
+  hosts: all,!local-test-node
   roles:
     - role: common
   tags: [ system ]
